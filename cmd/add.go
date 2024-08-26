@@ -15,13 +15,10 @@ var addCmd = &cobra.Command{
 	Use:   "add",
 	Short: "Add a task",
 	Long:  `Create a new task`,
+	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 
-		name, err := cmd.Flags().GetString("name")
-		if err != nil {
-			fmt.Println("Error adding name")
-			return
-		}
+		name := args[0]
 
 		if len(strings.TrimSpace(name)) == 0 {
 			fmt.Println("Name is requred")
@@ -63,6 +60,4 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// addCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-
-	addCmd.Flags().StringP("name", "n", "", "The name of the task to be added")
 }
