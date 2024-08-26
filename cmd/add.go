@@ -12,10 +12,11 @@ import (
 
 // addCmd represents the add command
 var addCmd = &cobra.Command{
-	Use:   "add",
-	Short: "Add a task",
-	Long:  `Create a new task`,
-	Args:  cobra.ExactArgs(1),
+	Use:     "add",
+	Short:   "Add a task",
+	Long:    `Create a new task`,
+	Example: "  gotodo add [Task_Name]",
+	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 
 		name := args[0]
