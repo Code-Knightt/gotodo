@@ -1,4 +1,4 @@
-## GoToDo
+# GoToDo
 
 ```
 Create, manage, complete and delete your tasks
@@ -18,6 +18,12 @@ Flags:
   -h, --help     help for gotodo
 
 Use "gotodo [command] --help" for more information about a command.
+```
+
+### Install
+
+```
+go install github.com/Code-knightt/gotodo
 ```
 
 ### Add task
